@@ -22,6 +22,25 @@ double Application::lastY = HEIGHT / 2.0;
 bool Application::firstMouse = true;
 bool Application::keys[1024];
 
+int Application::taskChanger(){
+	glfwPollEvents();
+	if (keys[GLFW_KEY_1]) {
+		return 1;
+	}
+	else if (keys[GLFW_KEY_2]) {
+		return 2;
+	}
+	else if (keys[GLFW_KEY_3]) {
+		return 3;
+	}
+	else if (keys[GLFW_KEY_4]) {
+		return 4;
+	}
+	else {
+		return 0;
+	}
+}
+
 
 Application::Application()
 {
